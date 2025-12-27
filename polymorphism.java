@@ -1,21 +1,27 @@
-class calculator{
-    int add(int a,int b){
-         return a+b;
+ class student{
+    private int marks;
+
+    public void setmarks(int marks){
+        if (marks>0 &&marks<=100){
+            this.marks = marks;
+        }
+        else{
+        System.out.println("invalide details");
+        }
     }
-    double add(double a,double b){
-        return a+b;
-    }
-    int minus(int a,int b){
-        return a-b;
-    }
-}
+     public int getmarks(){
+        return marks ;
+     }
+ }
 
 public class polymorphism {
     public static void main(String[] args){
-        calculator cal = new calculator();
-        System.out.println(cal.add(3,9));
-        System.out.println(cal.add(23.4,4.5));
-        System.out.println(cal.minus(6,3));
+        student sc = new student();
+        sc.setmarks(23);
+        System.out.println(sc.getmarks());
 
+        student sc2 = new student();
+        sc2.setmarks(103);
+        System.out.println(sc2.getmarks());
     }
 }
